@@ -202,3 +202,5 @@ fisioterapiku/
 - Code review sessions
 - Architecture discussions
 - Documentation updates
+
+rifal
