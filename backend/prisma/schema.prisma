@@ -79,7 +79,7 @@ model Therapist {
   userId            String    @unique
   name              String
   phone             String
-  specialization    String[]
+  bidang            String[]
   experience        Int       @default(0)
   rating            Float     @default(0)
   reviewCount       Int       @default(0)
