@@ -50,7 +50,7 @@ export class AuthService {
           userId: user.id,
           name: data.name,
           phone: data.phone,
-          specialization: [],
+          bidang: [],
           qualifications: [],
         },
       });
