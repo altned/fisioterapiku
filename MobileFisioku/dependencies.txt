@@ -1,0 +1,15 @@
+# Dependencies to install
+@react-navigation/native
+@react-navigation/native-stack
+@react-navigation/bottom-tabs
+react-native-screens
+react-native-safe-area-context
+@reduxjs/toolkit
+react-redux
+axios
+@react-native-async-storage/async-storage
+react-native-vector-icons
+react-native-paper
+
+# Dev Dependencies
+@types/react-native-vector-icons
