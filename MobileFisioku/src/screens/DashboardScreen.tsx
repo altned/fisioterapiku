@@ -23,6 +23,7 @@ const DashboardScreen = () => {
 
   useEffect(() => {
     loadTherapists();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadTherapists = () => {

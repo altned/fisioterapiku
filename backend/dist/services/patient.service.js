@@ -75,7 +75,7 @@ class PatientService {
                     select: {
                         id: true,
                         name: true,
-                        specialization: true,
+                        bidang: true,
                         profileImage: true,
                         rating: true,
                     },
@@ -99,7 +99,7 @@ class PatientService {
                     select: {
                         id: true,
                         name: true,
-                        specialization: true,
+                        bidang: true,
                         profileImage: true,
                         rating: true,
                         phone: true,

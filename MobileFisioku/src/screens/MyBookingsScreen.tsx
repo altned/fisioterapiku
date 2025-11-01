@@ -8,15 +8,14 @@ import {
   ActivityIndicator,
   RefreshControl,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { useAppSelector } from '../store/hooks';
-import api from '../services/api';
-import { ENDPOINTS } from '../constants/config';
+import { bookingService } from '../services/bookingService';
 import { COLORS, SIZES, SPACING, FONTS, SHADOWS } from '../constants/theme';
 import { Booking } from '../types';
 
 const MyBookingsScreen = () => {
-  const { profile } = useAppSelector(state => state.auth);
+  const navigation = useNavigation<any>();
   const [bookings, setBookings] = React.useState<Booking[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [refreshing, setRefreshing] = React.useState(false);
@@ -27,9 +26,9 @@ const MyBookingsScreen = () => {
 
   const loadBookings = async () => {
     try {
-      const response = await api.get(ENDPOINTS.PATIENT.BOOKINGS);
+      const response = await bookingService.getMyBookings();
       if (response.success && response.data) {
-        setBookings(response.data as Booking[]);
+        setBookings(response.data);
       } else {
         setBookings([]);
       }
@@ -85,8 +84,15 @@ const MyBookingsScreen = () => {
     }
   };
 
+  const handleBookingPress = (booking: Booking) => {
+    navigation.navigate('BookingDetail', { bookingId: booking.id });
+  };
+
   const renderBookingCard = ({ item }: { item: Booking }) => (
-    <TouchableOpacity style={styles.card} activeOpacity={0.7}>
+    <TouchableOpacity 
+      style={styles.card} 
+      activeOpacity={0.7}
+      onPress={() => handleBookingPress(item)}>
       <View style={styles.cardHeader}>
         <View style={styles.therapistInfo}>
           <Text style={styles.therapistName}>{item.therapist?.name || 'Therapist'}</Text>

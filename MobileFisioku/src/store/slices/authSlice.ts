@@ -68,6 +68,9 @@ const authSlice = createSlice({
       state.user = action.payload;
       state.isAuthenticated = true;
     },
+    setProfile: (state, action: PayloadAction<Patient>) => {
+      state.profile = action.payload;
+    },
   },
   extraReducers: builder => {
     builder
@@ -121,5 +124,5 @@ const authSlice = createSlice({
   },
 });
 
-export const { clearError, setUser } = authSlice.actions;
+export const { clearError, setUser, setProfile } = authSlice.actions;
 export default authSlice.reducer;

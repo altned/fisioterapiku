@@ -69,7 +69,7 @@ export declare class PatientService {
             id: string;
             name: string;
             profileImage: string | null;
-            specialization: string[];
+            bidang: string[];
             rating: number;
         };
         payment: {
@@ -118,7 +118,7 @@ export declare class PatientService {
             name: string;
             phone: string;
             profileImage: string | null;
-            specialization: string[];
+            bidang: string[];
             rating: number;
         };
         payment: {

@@ -44,13 +44,13 @@ const ProfileScreen = () => {
       icon: 'account-edit',
       title: 'Edit Profile',
       subtitle: 'Update your personal information',
-      onPress: () => Alert.alert('Coming Soon', 'Edit profile feature will be available soon'),
+      onPress: () => navigation.navigate('EditProfile'),
     },
     {
       icon: 'lock-reset',
       title: 'Change Password',
       subtitle: 'Update your password',
-      onPress: () => Alert.alert('Coming Soon', 'Change password feature will be available soon'),
+      onPress: () => navigation.navigate('ChangePassword'),
     },
     {
       icon: 'card-account-details',

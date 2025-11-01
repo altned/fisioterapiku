@@ -15,6 +15,10 @@ import ScheduleSelectionScreen from '../screens/ScheduleSelectionScreen';
 import BookingConfirmationScreen from '../screens/BookingConfirmationScreen';
 import MyBookingsScreen from '../screens/MyBookingsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import BookingDetailScreen from '../screens/BookingDetailScreen';
+import PaymentUploadScreen from '../screens/PaymentUploadScreen';
+import EditProfileScreen from '../screens/EditProfileScreen';
+import ChangePasswordScreen from '../screens/ChangePasswordScreen';
 
 import { COLORS, SIZES } from '../constants/theme';
 
@@ -128,6 +132,46 @@ const AppNavigator = () => {
           options={{
             headerShown: true,
             title: 'Confirm Booking',
+            headerStyle: { backgroundColor: COLORS.primary },
+            headerTintColor: COLORS.white,
+          }}
+        />
+        <Stack.Screen
+          name="BookingDetail"
+          component={BookingDetailScreen}
+          options={{
+            headerShown: true,
+            title: 'Booking Details',
+            headerStyle: { backgroundColor: COLORS.primary },
+            headerTintColor: COLORS.white,
+          }}
+        />
+        <Stack.Screen
+          name="PaymentUpload"
+          component={PaymentUploadScreen}
+          options={{
+            headerShown: true,
+            title: 'Upload Payment',
+            headerStyle: { backgroundColor: COLORS.primary },
+            headerTintColor: COLORS.white,
+          }}
+        />
+        <Stack.Screen
+          name="EditProfile"
+          component={EditProfileScreen}
+          options={{
+            headerShown: true,
+            title: 'Edit Profile',
+            headerStyle: { backgroundColor: COLORS.primary },
+            headerTintColor: COLORS.white,
+          }}
+        />
+        <Stack.Screen
+          name="ChangePassword"
+          component={ChangePasswordScreen}
+          options={{
+            headerShown: true,
+            title: 'Change Password',
             headerStyle: { backgroundColor: COLORS.primary },
             headerTintColor: COLORS.white,
           }}

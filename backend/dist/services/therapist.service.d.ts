@@ -41,7 +41,7 @@ export declare class TherapistService {
             phone: string;
             profileImage: string | null;
             userId: string;
-            specialization: string[];
+            bidang: string[];
             experience: number;
             rating: number;
             reviewCount: number;
@@ -95,7 +95,7 @@ export declare class TherapistService {
         phone: string;
         profileImage: string | null;
         userId: string;
-        specialization: string[];
+        bidang: string[];
         experience: number;
         rating: number;
         reviewCount: number;
@@ -118,7 +118,7 @@ export declare class TherapistService {
         phone: string;
         profileImage: string | null;
         userId: string;
-        specialization: string[];
+        bidang: string[];
         experience: number;
         rating: number;
         reviewCount: number;
