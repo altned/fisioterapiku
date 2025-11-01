@@ -111,6 +111,7 @@ export declare class PatientService {
         complaint: string;
         status: import(".prisma/client").$Enums.BookingStatus;
         notes: string | null;
+        hasConsent: boolean;
     })[]>;
     static getBookingById(bookingId: string, patientId: string): Promise<({
         therapist: {
@@ -169,6 +170,7 @@ export declare class PatientService {
         complaint: string;
         status: import(".prisma/client").$Enums.BookingStatus;
         notes: string | null;
+        hasConsent: boolean;
     }) | null>;
     static getAllPatients(): Promise<({
         user: {

@@ -70,6 +70,7 @@ model Patient {
   user              User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   bookings          Booking[]
   reviews           Review[]
+  consents          Consent[]
 
   @@map("patients")
 }
@@ -126,6 +127,7 @@ model Booking {
   medicalHistory    String?
   status            BookingStatus @default(PENDING)
   notes             String?
+  hasConsent        Boolean       @default(false)
   createdAt         DateTime      @default(now())
   updatedAt         DateTime      @updatedAt
 
@@ -134,6 +136,7 @@ model Booking {
   payment           Payment?
   session           Session?
   messages          Message[]
+  consent           Consent?
 
   @@map("bookings")
 }
@@ -217,4 +220,32 @@ model Notification {
   user              User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("notifications")
+}
+
+model Consent {
+  id                String    @id @default(uuid())
+  bookingId         String    @unique
+  patientId         String
+  consentVersion    String    @default("1.0")
+  consentText       String    @db.Text
+  isAgreed          Boolean   @default(false)
+  agreedAt          DateTime?
+  ipAddress         String?
+  deviceInfo        String?
+  
+  agreeExamination  Boolean   @default(false)
+  agreeProcedure    Boolean   @default(false)
+  agreeRisks        Boolean   @default(false)
+  agreeDataUsage    Boolean   @default(false)
+  agreeEmergency    Boolean   @default(false)
+  
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  booking           Booking   @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  patient           Patient   @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@map("consents")
+  @@index([patientId])
+  @@index([bookingId])
 }

@@ -19,6 +19,7 @@ import BookingDetailScreen from '../screens/BookingDetailScreen';
 import PaymentUploadScreen from '../screens/PaymentUploadScreen';
 import EditProfileScreen from '../screens/EditProfileScreen';
 import ChangePasswordScreen from '../screens/ChangePasswordScreen';
+import ConsentScreen from '../screens/ConsentScreen';
 
 import { COLORS, SIZES } from '../constants/theme';
 
@@ -122,6 +123,16 @@ const AppNavigator = () => {
           options={{
             headerShown: true,
             title: 'Select Schedule',
+            headerStyle: { backgroundColor: COLORS.primary },
+            headerTintColor: COLORS.white,
+          }}
+        />
+        <Stack.Screen
+          name="Consent"
+          component={ConsentScreen}
+          options={{
+            headerShown: true,
+            title: 'Informed Consent',
             headerStyle: { backgroundColor: COLORS.primary },
             headerTintColor: COLORS.white,
           }}

@@ -19,6 +19,7 @@ export declare class PaymentService {
             complaint: string;
             status: import(".prisma/client").$Enums.BookingStatus;
             notes: string | null;
+            hasConsent: boolean;
         };
     } & {
         id: string;
@@ -47,6 +48,7 @@ export declare class PaymentService {
             complaint: string;
             status: import(".prisma/client").$Enums.BookingStatus;
             notes: string | null;
+            hasConsent: boolean;
         };
     } & {
         id: string;
@@ -75,6 +77,7 @@ export declare class PaymentService {
             complaint: string;
             status: import(".prisma/client").$Enums.BookingStatus;
             notes: string | null;
+            hasConsent: boolean;
         };
     } & {
         id: string;
@@ -136,6 +139,7 @@ export declare class PaymentService {
             complaint: string;
             status: import(".prisma/client").$Enums.BookingStatus;
             notes: string | null;
+            hasConsent: boolean;
         };
     } & {
         id: string;
@@ -198,6 +202,7 @@ export declare class PaymentService {
                 complaint: string;
                 status: import(".prisma/client").$Enums.BookingStatus;
                 notes: string | null;
+                hasConsent: boolean;
             };
         } & {
             id: string;

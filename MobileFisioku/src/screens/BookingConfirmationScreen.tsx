@@ -11,6 +11,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useAppSelector } from '../store/hooks';
 import api from '../services/api';
 import { ENDPOINTS } from '../constants/config';
+import { consentService } from '../services/consentService';
 import { COLORS, SIZES, SPACING, FONTS, SHADOWS } from '../constants/theme';
 import Button from '../components/Button';
 
@@ -25,34 +26,60 @@ const BookingConfirmationScreen = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleConfirmBooking = async () => {
+    // Verify consent was agreed
+    if (!bookingData.consentAgreed) {
+      Alert.alert('Error', 'Consent must be agreed before booking');
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
+      // Step 1: Create the booking
       const payload = {
-        therapistId: therapist.id,
+        therapistId: bookingData.therapistId,
         appointmentDate: bookingData.appointmentDate,
         appointmentTime: bookingData.appointmentTime,
-        location: bookingData.address,
+        location: bookingData.location,
         complaint: bookingData.complaint,
         medicalHistory: bookingData.medicalHistory || undefined,
       };
 
-      const response = await api.post(ENDPOINTS.BOOKING.CREATE, payload);
+      const bookingResponse = await api.post(ENDPOINTS.BOOKING.CREATE, payload);
 
-      if (response.success) {
-        Alert.alert(
-          'Booking Successful!',
-          'Your booking has been submitted. Please wait for therapist confirmation.',
-          [
-            {
-              text: 'OK',
-              onPress: () => navigation.navigate('Bookings'),
-            },
-          ]
-        );
-      } else {
-        Alert.alert('Booking Failed', response.message || 'Failed to create booking');
+      if (!bookingResponse.success || !bookingResponse.data) {
+        Alert.alert('Booking Failed', bookingResponse.message || 'Failed to create booking');
+        return;
       }
+
+      const createdBooking = bookingResponse.data;
+
+      // Step 2: Create consent record
+      const consentResponse = await consentService.createConsent(createdBooking.id);
+
+      if (!consentResponse.success || !consentResponse.data) {
+        Alert.alert('Warning', 'Booking created but consent failed. Please contact support.');
+        navigation.navigate('Bookings');
+        return;
+      }
+
+      // Step 3: Agree to consent with checkboxes
+      await consentService.agreeConsent(
+        consentResponse.data.id,
+        bookingData.consentCheckboxes
+      );
+
+      // Success
+      Alert.alert(
+        'Booking Successful!',
+        'Your booking has been submitted with informed consent. Please wait for therapist confirmation.',
+        [
+          {
+            text: 'OK',
+            onPress: () => navigation.navigate('Bookings'),
+          },
+        ]
+      );
     } catch (error: any) {
       Alert.alert('Error', error.message || 'Something went wrong');
     } finally {

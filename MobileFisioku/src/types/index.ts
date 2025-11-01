@@ -102,3 +102,35 @@ export interface RegisterData {
   name: string;
   phone: string;
 }
+
+export interface Consent {
+  id: string;
+  bookingId: string;
+  patientId: string;
+  consentVersion: string;
+  consentText: string;
+  isAgreed: boolean;
+  agreedAt?: string;
+  ipAddress?: string;
+  deviceInfo?: string;
+  agreeExamination: boolean;
+  agreeProcedure: boolean;
+  agreeRisks: boolean;
+  agreeDataUsage: boolean;
+  agreeEmergency: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ConsentCheckboxes {
+  agreeExamination: boolean;
+  agreeProcedure: boolean;
+  agreeRisks: boolean;
+  agreeDataUsage: boolean;
+  agreeEmergency: boolean;
+}
+
+export interface ConsentText {
+  version: string;
+  text: string;
+}

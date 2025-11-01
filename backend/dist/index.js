@@ -15,6 +15,7 @@ const patient_routes_1 = __importDefault(require("./routes/patient.routes"));
 const therapist_routes_1 = __importDefault(require("./routes/therapist.routes"));
 const booking_routes_1 = __importDefault(require("./routes/booking.routes"));
 const payment_routes_1 = __importDefault(require("./routes/payment.routes"));
+const consent_routes_1 = __importDefault(require("./routes/consent.routes"));
 const env_1 = require("./config/env");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
@@ -45,6 +46,7 @@ app.use('/api/patients', patient_routes_1.default);
 app.use('/api/therapists', therapist_routes_1.default);
 app.use('/api/bookings', booking_routes_1.default);
 app.use('/api/payments', payment_routes_1.default);
+app.use('/api/consents', consent_routes_1.default);
 app.use(errorHandler_middleware_1.errorHandler);
 io.on('connection', (socket) => {
     console.log('Client connected:', socket.id);

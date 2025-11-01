@@ -55,6 +55,7 @@ export declare class BookingService {
         complaint: string;
         status: import(".prisma/client").$Enums.BookingStatus;
         notes: string | null;
+        hasConsent: boolean;
     }>;
     static getBookingById(id: string): Promise<{
         patient: {
@@ -128,6 +129,7 @@ export declare class BookingService {
         complaint: string;
         status: import(".prisma/client").$Enums.BookingStatus;
         notes: string | null;
+        hasConsent: boolean;
     }>;
     static getBookingsByPatient(patientId: string, page?: number, limit?: number): Promise<{
         bookings: ({
@@ -175,6 +177,7 @@ export declare class BookingService {
             complaint: string;
             status: import(".prisma/client").$Enums.BookingStatus;
             notes: string | null;
+            hasConsent: boolean;
         })[];
         pagination: {
             page: number;
@@ -225,6 +228,7 @@ export declare class BookingService {
             complaint: string;
             status: import(".prisma/client").$Enums.BookingStatus;
             notes: string | null;
+            hasConsent: boolean;
         })[];
         pagination: {
             page: number;
@@ -292,6 +296,7 @@ export declare class BookingService {
         complaint: string;
         status: import(".prisma/client").$Enums.BookingStatus;
         notes: string | null;
+        hasConsent: boolean;
     }>;
     static cancelBooking(id: string, _userId: string): Promise<{
         id: string;
@@ -306,6 +311,7 @@ export declare class BookingService {
         complaint: string;
         status: import(".prisma/client").$Enums.BookingStatus;
         notes: string | null;
+        hasConsent: boolean;
     }>;
 }
 export {};

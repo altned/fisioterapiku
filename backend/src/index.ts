@@ -9,6 +9,7 @@ import patientRoutes from './routes/patient.routes';
 import therapistRoutes from './routes/therapist.routes';
 import bookingRoutes from './routes/booking.routes';
 import paymentRoutes from './routes/payment.routes';
+import consentRoutes from './routes/consent.routes';
 import { env } from './config/env';
 
 dotenv.config();
@@ -43,6 +44,7 @@ app.use('/api/patients', patientRoutes);
 app.use('/api/therapists', therapistRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/payments', paymentRoutes);
+app.use('/api/consents', consentRoutes);
 
 app.use(errorHandler);
 

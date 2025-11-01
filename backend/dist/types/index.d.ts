@@ -4,6 +4,10 @@ export interface AuthRequest extends Request {
         id: string;
         email: string;
         role: string;
+        profile?: {
+            id: string;
+            [key: string]: any;
+        };
     };
 }
 export interface PaginationQuery {

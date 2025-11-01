@@ -61,11 +61,11 @@ const ScheduleSelectionScreen = () => {
       return;
     }
 
-    // Navigate to confirmation screen
-    navigation.navigate('BookingConfirmation', {
-      therapist,
+    // Navigate to consent screen
+    navigation.navigate('Consent', {
       bookingData: {
         ...bookingData,
+        therapistId: therapist?.id,
         appointmentDate: selectedDate,
         appointmentTime: selectedTime,
       },
