@@ -99,7 +99,7 @@ fisioterapiku/
 
 1. **User** - Core user accounts (Patient, Therapist, Admin)
 2. **Patient** - Patient profile & medical history
-3. **Therapist** - Therapist profile, specialization, pricing
+3. **Therapist** - Therapist profile, bidang terapi, pricing
 4. **Availability** - Therapist weekly schedule
 5. **Booking** - Appointment bookings
 6. **Payment** - Payment records & verification
@@ -255,42 +255,42 @@ Profile Tab → View Info → Logout → Back to Login
 
 1. **Dr. Sarah Johnson**
    - Email: `sarah.johnson@fisioku.com`
-   - Specialization: Sports Injury Rehabilitation, Manual Therapy
+   - Bidang Terapi: Fisioterapi Muskuloskeletal, Fisioterapi Olahraga
    - Price: Rp 300,000/session
    - Rating: 4.8
    - Experience: 8 years
 
 2. **Dr. Michael Chen**
    - Email: `michael.chen@fisioku.com`
-   - Specialization: Neurological Rehabilitation, Stroke Recovery
+   - Bidang Terapi: Fisioterapi Neuromuskular, Fisioterapi Geriatrik
    - Price: Rp 350,000/session
    - Rating: 4.9
    - Experience: 10 years
 
 3. **Dr. Linda Wijaya**
    - Email: `linda.wijaya@fisioku.com`
-   - Specialization: Pediatric Physiotherapy, Child Development
+   - Bidang Terapi: Fisioterapi Pediatrik
    - Price: Rp 280,000/session
    - Rating: 4.7
    - Experience: 6 years
 
 4. **Dr. David Tan**
    - Email: `david.tan@fisioku.com`
-   - Specialization: Back Pain Management, Spinal Therapy
+   - Bidang Terapi: Fisioterapi Muskuloskeletal
    - Price: Rp 320,000/session
    - Rating: 4.6
    - Experience: 7 years
 
 5. **Dr. Maya Putri**
    - Email: `maya.putri@fisioku.com`
-   - Specialization: Women Health, Prenatal & Postnatal Care
+   - Bidang Terapi: Fisioterapi Obstetri dan Ginekologi
    - Price: Rp 300,000/session
    - Rating: 4.9
    - Experience: 9 years
 
 6. **Dr. Ryan Pratama**
    - Email: `ryan.pratama@fisioku.com`
-   - Specialization: Cardiopulmonary Rehabilitation, Respiratory Care
+   - Bidang Terapi: Fisioterapi Kardiopulmoner
    - Price: Rp 330,000/session
    - Rating: 4.8
    - Experience: 8 years

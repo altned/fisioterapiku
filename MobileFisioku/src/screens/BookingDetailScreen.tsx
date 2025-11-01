@@ -177,8 +177,10 @@ const BookingDetailScreen = () => {
               )}
               <View style={styles.therapistInfo}>
                 <Text style={styles.therapistName}>{booking.therapist.name}</Text>
-                <Text style={styles.therapistSpecialization}>
-                  {booking.therapist.specialization.join(', ')}
+                <Text style={styles.therapistBidang}>
+                  {booking.therapist.bidang && Array.isArray(booking.therapist.bidang)
+                    ? booking.therapist.bidang.join(', ')
+                    : 'Terapi Umum'}
                 </Text>
                 <View style={styles.ratingContainer}>
                   <Icon name="star" size={16} color={COLORS.warning} />
@@ -383,7 +385,7 @@ const styles = StyleSheet.create({
     color: COLORS.text,
     marginBottom: 4,
   },
-  therapistSpecialization: {
+  therapistBidang: {
     fontSize: SIZES.small,
     color: COLORS.textSecondary,
     marginBottom: SPACING.xs,

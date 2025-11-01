@@ -28,7 +28,7 @@ export interface Therapist {
   userId: string;
   name: string;
   phone: string;
-  specialization: string[];
+  bidang: string[];
   experience: number;
   rating: number;
   reviewCount: number;

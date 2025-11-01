@@ -146,7 +146,7 @@ Find your therapist and book an appointment
    - Shows welcome message with name
    - Displays 6 therapist cards
    - Each card shows:
-     * Name & specialization
+     * Name & bidang terapi
      * Rating & review count
      * Location
      * Price per session

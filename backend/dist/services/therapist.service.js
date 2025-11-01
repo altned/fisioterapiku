@@ -10,7 +10,7 @@ class TherapistService {
         const skip = (page - 1) * limit;
         const where = {};
         if (filter.specialization) {
-            where.specialization = {
+            where.bidang = {
                 has: filter.specialization,
             };
         }

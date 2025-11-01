@@ -754,12 +754,12 @@ Password: password123
 1. Email: therapist1@fisioku.com
    Password: password123
    Name: Dr. Sarah Johnson
-   Specialization: Sports Injury, Orthopedic
+   Bidang Terapi: Fisioterapi Muskuloskeletal, Fisioterapi Olahraga
 
 2. Email: therapist2@fisioku.com
    Password: password123
    Name: Dr. Michael Chen
-   Specialization: Neurological, Stroke Rehabilitation
+   Bidang Terapi: Fisioterapi Neuromuskular, Fisioterapi Geriatrik
    
 ... (6 total therapists)
 ```

@@ -228,7 +228,7 @@
 
 ### Dashboard Screen
 - **Therapist Cards**: Grid/list view
-- **Search & Filter**: By specialization, location, rating
+- **Search & Filter**: By bidang terapi, location, rating
 - **Quick Actions**: Book appointment, view history
 - **Notifications**: Booking updates, reminders
 

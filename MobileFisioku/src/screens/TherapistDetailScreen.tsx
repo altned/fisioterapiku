@@ -110,15 +110,19 @@ const TherapistDetailScreen = () => {
           )}
         </View>
 
-        {/* Specialization Section */}
+        {/* Bidang Terapi Section */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Specialization</Text>
+          <Text style={styles.sectionTitle}>Bidang Terapi</Text>
           <View style={styles.tagsContainer}>
-            {selectedTherapist.specialization.map((spec, index) => (
-              <View key={index} style={styles.tag}>
-                <Text style={styles.tagText}>{spec}</Text>
-              </View>
-            ))}
+            {selectedTherapist.bidang && selectedTherapist.bidang.length > 0 ? (
+              selectedTherapist.bidang.map((spec, index) => (
+                <View key={index} style={styles.tag}>
+                  <Text style={styles.tagText}>{spec}</Text>
+                </View>
+              ))
+            ) : (
+              <Text style={styles.bioText}>Terapi Umum</Text>
+            )}
           </View>
         </View>
 

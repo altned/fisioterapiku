@@ -96,8 +96,10 @@ const MyBookingsScreen = () => {
       <View style={styles.cardHeader}>
         <View style={styles.therapistInfo}>
           <Text style={styles.therapistName}>{item.therapist?.name || 'Therapist'}</Text>
-          <Text style={styles.specialization}>
-            {item.therapist?.specialization[0] || 'Physiotherapy'}
+          <Text style={styles.bidangText}>
+            {item.therapist?.bidang && item.therapist.bidang.length > 0 
+              ? item.therapist.bidang[0] 
+              : 'Terapi Umum'}
           </Text>
         </View>
         <View
@@ -226,7 +228,7 @@ const styles = StyleSheet.create({
     color: COLORS.text,
     marginBottom: 4,
   },
-  specialization: {
+  bidangText: {
     fontSize: SIZES.small,
     color: COLORS.textSecondary,
   },

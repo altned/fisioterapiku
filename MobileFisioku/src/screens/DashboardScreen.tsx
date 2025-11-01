@@ -57,8 +57,10 @@ const DashboardScreen = () => {
 
         <View style={styles.info}>
           <Text style={styles.name}>{item.name}</Text>
-          <Text style={styles.specialization} numberOfLines={1}>
-            {item.specialization.join(', ')}
+          <Text style={styles.bidangText} numberOfLines={1}>
+            {item.bidang && Array.isArray(item.bidang) 
+              ? item.bidang.join(', ') 
+              : 'Terapi Umum'}
           </Text>
 
           <View style={styles.details}>
@@ -208,7 +210,7 @@ const styles = StyleSheet.create({
     color: COLORS.text,
     marginBottom: 4,
   },
-  specialization: {
+  bidangText: {
     fontSize: SIZES.small,
     color: COLORS.textSecondary,
     marginBottom: SPACING.xs,

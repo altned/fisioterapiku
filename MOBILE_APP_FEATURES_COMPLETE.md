@@ -45,7 +45,7 @@ View in "My Bookings" Tab
 
 **Features:**
 - Full therapist profile with photo
-- Name, specialization, experience
+- Name, bidang terapi, experience
 - Rating & review count
 - Location & price per session
 - Availability status badge
@@ -144,7 +144,7 @@ View in "My Bookings" Tab
 **Features:**
 - List of all user bookings
 - Booking cards showing:
-  - Therapist name & specialization
+  - Therapist name & bidang terapi
   - Status badge (color-coded)
   - Date & time
   - Location

@@ -444,7 +444,7 @@ Mobile:
   - Send to mobile app
 
 - [ ] **Search & Filtering**
-  - Search therapists by name, specialization
+  - Search therapists by name, bidang terapi
   - Filter by location, price, rating
   - Sort options
 

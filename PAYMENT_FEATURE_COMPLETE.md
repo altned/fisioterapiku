@@ -237,7 +237,7 @@ POST /api/payments/:bookingId/upload
 2. **Therapist Info**
    - Avatar (or icon placeholder)
    - Name
-   - Specialization
+   - Bidang Terapi
    - Rating & reviews
 
 3. **Appointment Details**

@@ -201,7 +201,7 @@ Features:
 - Welcome message with user name
 - Therapist cards with:
   - Profile image/placeholder
-  - Name & specialization
+  - Name & bidang terapi
   - Rating & review count
   - Location
   - Price per session

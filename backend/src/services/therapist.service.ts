@@ -1,7 +1,7 @@
 import prisma from '../config/database';
 
 interface TherapistFilter {
-  specialization?: string;
+  specialization?: string; // Query parameter name kept as 'specialization' for API compatibility, maps to 'bidang' field
   location?: string;
   minRating?: number;
   isAvailable?: boolean;
@@ -10,7 +10,7 @@ interface TherapistFilter {
 interface UpdateTherapistData {
   name?: string;
   phone?: string;
-  specialization?: string[];
+  bidang?: string[];
   experience?: number;
   location?: string;
   pricePerSession?: number;
@@ -27,7 +27,7 @@ export class TherapistService {
     const where: any = {};
 
     if (filter.specialization) {
-      where.specialization = {
+      where.bidang = {
         has: filter.specialization,
       };
     }

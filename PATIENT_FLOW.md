@@ -178,7 +178,7 @@ interface Booking {
 interface Therapist {
   id: string;
   name: string;
-  specialization: string[];
+  bidang: string[]; // Bidang terapi fisioterapi
   experience: number;
   rating: number;
   reviewCount: number;

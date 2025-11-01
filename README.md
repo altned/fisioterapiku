@@ -1,3 +1,9 @@
+# FisiOku - Platform Fisioterapi Indonesia
+
+> **📚 DOKUMENTASI LENGKAP**: Lihat [ACCURATE_DOCUMENTATION.md](./ACCURATE_DOCUMENTATION.md) untuk dokumentasi komprehensif berdasarkan implementasi aktual code.
+
+---
+
 # Fisioku - Aplikasi Fisioterapi
 
 ## Struktur Proyek

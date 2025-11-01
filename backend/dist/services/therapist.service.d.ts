@@ -7,7 +7,7 @@ interface TherapistFilter {
 interface UpdateTherapistData {
     name?: string;
     phone?: string;
-    specialization?: string[];
+    bidang?: string[];
     experience?: number;
     location?: string;
     pricePerSession?: number;

@@ -338,7 +338,7 @@ Find your therapist and book an appointment
 
 [6 Therapist Cards with:
  - Profile image/initial
- - Name & specialization
+ - Name & bidang terapi
  - Rating & reviews
  - Location
  - Price

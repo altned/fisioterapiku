@@ -280,7 +280,7 @@ Wait for app to build and launch...
 **Test Therapist Cards:**
 Each card should show:
 - ✅ Therapist name
-- ✅ Specialization
+- ✅ Bidang Terapi
 - ✅ Rating & review count
 - ✅ Location
 - ✅ Price per session

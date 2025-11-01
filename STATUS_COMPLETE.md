@@ -369,7 +369,7 @@ You'll know everything is working when:
 5. ✅ Dashboard shows: "Hello, Budi Santoso!"
 6. ✅ **6 therapist cards displayed with:**
    - Profile image or initial
-   - Name & specialization
+   - Name & bidang terapi
    - Rating & review count
    - Location
    - Price per session

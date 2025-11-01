@@ -119,7 +119,7 @@ MobileFisioku/
 - Therapist list (cards)
 - Each card shows:
   - Profile image/placeholder
-  - Name & specialization
+  - Name & bidang terapi
   - Rating & review count
   - Location
   - Price per session
